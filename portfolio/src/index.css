@@ -1,6 +1,9 @@
 *{
   padding: 0px;
   margin: 0px;
+  text-decoration: none;
+  color: black;
+  font-size: calc(18px + 0.2vw)
 }
 body,html, #root{
   height: 100%;
@@ -10,11 +13,14 @@ body,html, #root{
   background-color: #f8f8f8;
 }
 /*#region RegionName*/
-
 nav{
   display:flex;
   flex-flow: row wrap;
   justify-content: flex-start;
+}
+.navButton{
+  font-size: calc(20px + 0.5vw);
+  padding:20px
 }
 
 /*#endregion RegionName*/
