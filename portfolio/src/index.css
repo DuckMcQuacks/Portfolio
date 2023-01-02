@@ -21,6 +21,7 @@ nav{
   box-shadow: 0px 11px 30px -2px rgba(0,0,0,0.17);
   -webkit-box-shadow: 0px 11px 30px -2px rgba(0,0,0,0.17);
   -moz-box-shadow: 0px 11px 30px -2px rgba(0,0,0,0.17);
+  text-align: center;
 }
 .navButton_Container{
   display: flex;
@@ -34,6 +35,38 @@ nav{
 .navButton:hover{
   color:#f9d534;
   font-size: calc(17.8px + 0.299vw);
+}
+.fill{
+  background-image: url("https://d33wubrfki0l68.cloudfront.net/79e75114856ae61628d2ad26504e3ff4ab2c71b6/f06a4/assets/svg/ham-menu.svg");
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position-x: center;
+  background-position-y: center;
+  font-size: calc(18px + 0.3vw);
+  padding: 0px 30px;
+}
+.fill.active{
+  background-image: url("https://d33wubrfki0l68.cloudfront.net/de2a681c8ca1630b29949b3a34bf158a686a0554/6a0ec/assets/svg/ham-menu-close.svg");
+}
+ul{
+  transition: all 1s;
+  position: absolute;
+  width:100%;
+  background-color: #fafafa;
+}
+
+.hidden{
+  transition: all 1s;
+  position: absolute;
+  top: -100px;
+  width:100%;
+  background-color: #fafafa;
+}
+.not_hidden{
+  transition: all 1s;
+  position: absolute;
+  width:100%;
+  background-color: #fafafa;
 }
 
 
