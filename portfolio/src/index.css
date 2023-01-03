@@ -3,12 +3,17 @@
   margin: 0px;
   text-decoration: none;
   font-size: calc(18px + 0.2vw)
-} 
+}
+img{
+  max-width: 100%;
+  display: block;
+}
 body,html, #root{
   height: 100%;
   width: 100%;
   display:flex;
   flex-flow: column nowrap;
+
 }
 .dark{
   background-color: #222222;
@@ -20,7 +25,7 @@ body,html, #root{
   color: #222222;
   height:100%;
 }
-/*#region RegionName*/
+/*#region navbar*/
 nav{
   display:flex;
   flex-flow: row wrap;
@@ -97,6 +102,43 @@ ul{
   padding: 0px 30px;
 }
 
-/*#endregion RegionName*/
+/*#endregion navbar*/
 
+/*#region home*/
+.mask-container{
+  position: relative;
+}
+.color-image{
+  position: absolute;
+  inset:0;
+  background-image: url("./assets/color-image.jpg");
+  background-size: cover;
+}
+.blackWhite{
+  content:url("./assets/bw-image.jpg");
+  -webkit-mask-image: url("./assets/image-mask.png");
+  -webkit-mask-size: cover;
+  -webkit-mask-position: 100% 0%;
+  mask-image: url("./assets/image-mask.png");
+  mask-size: cover;
+  mask-position: 100% 0%;
+  animation: maskAnim 1s steps(24) forwards;
+  animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -webkit-animation: maskAnim 1s steps(24) forwards;
+  -moz-animation: maskAnim 1s steps(24) forwards;
+}
+@keyframes maskAnim {
+  0% {
+    -webkit-mask-position: 100% 0%;
+    mask-position: 100% 0%;
+  }
+  100% {
+    -webkit-mask-position: 0% 0%;
+    mask-position: 0% 0%;
+  }
+}
+  
+/*endregion home*/
 
