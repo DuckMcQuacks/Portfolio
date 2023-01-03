@@ -56,19 +56,10 @@ ul{
 }
 
 .hidden{
-  transition: all 1s;
-  position: absolute;
-  top: -100px;
-  width:100%;
-  background-color: #fafafa;
+  top:-1000px;
 }
-.not_hidden{
-  transition: all 1s;
-  position: absolute;
-  width:100%;
-  background-color: #fafafa;
+.active{
 }
-
 
 /*#endregion RegionName*/
 

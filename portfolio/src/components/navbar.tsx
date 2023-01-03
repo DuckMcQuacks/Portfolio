@@ -2,12 +2,13 @@ import {useState, useEffect} from "react"
 import { Link} from "react-router-dom"
 
 export default function Navbar(){
-    const [width , setWidth] = useState(0)
+    const [width , setWidth] = useState(window.innerWidth)
     const [isActive, setActive] = useState(false)
     //Conditional rendering for cross-Device compatibility regarding phones
     useEffect(() => {
         let cb = function () {
           setWidth(window.innerWidth);
+          setActive(width > 670 ? isActive : false)
         };
         window.addEventListener("resize", cb);
       
@@ -45,7 +46,7 @@ export default function Navbar(){
             <div className={"fill"+(isActive ? " active" : "")} onClick={clickHandler}></div> 
             }
         </nav>
-        <ul className={isActive ? "active" : "hidden"}>
+        <ul className={isActive ? "not_hidden" : "hidden"}>
             <hr></hr>
             <li>
             <Link to="/" >
