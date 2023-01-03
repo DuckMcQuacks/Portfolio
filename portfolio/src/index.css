@@ -2,26 +2,34 @@
   padding: 0px;
   margin: 0px;
   text-decoration: none;
-  color: black;
   font-size: calc(18px + 0.2vw)
-}
+} 
 body,html, #root{
   height: 100%;
   width: 100%;
   display:flex;
   flex-flow: column nowrap;
-  background-color: #fafafa;
+}
+.dark{
+  background-color: #222222;
+  color: white;
+  height:100%;
+}
+.light{
+  background-color: white;
+  color: #222222;
+  height:100%;
 }
 /*#region RegionName*/
 nav{
   display:flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  padding: 0px 1rem;
   box-shadow: 0px 11px 30px -2px rgba(0,0,0,0.17);
   -webkit-box-shadow: 0px 11px 30px -2px rgba(0,0,0,0.17);
   -moz-box-shadow: 0px 11px 30px -2px rgba(0,0,0,0.17);
   text-align: center;
+  padding: 20px 10px;
 }
 .navButton_Container{
   display: flex;
@@ -29,8 +37,19 @@ nav{
 }
 .navButton{
   font-size: calc(18px + 0.3vw);
-  padding:20px;
-  transition: all 0.5s;
+  padding:10px;
+  color:white;
+  -webkit-transition:all 0.3s ease;
+  -moz-transition:all 0.3s ease;
+   -ms-transition:all 0.3s ease;
+    -o-transition:all 0.3s ease;
+       transition:all 0.3s ease;
+}
+.textdark{
+  color: white;
+}
+.textlight{
+  color:black;
 }
 .navButton:hover{
   color:#f9d534;
@@ -49,16 +68,33 @@ nav{
   background-image: url("https://d33wubrfki0l68.cloudfront.net/de2a681c8ca1630b29949b3a34bf158a686a0554/6a0ec/assets/svg/ham-menu-close.svg");
 }
 ul{
-  transition: all 1s;
+  transition: all 0.4s;
   position: absolute;
   width:100%;
-  background-color: #fafafa;
 }
 
 .hidden{
-  top:-1000px;
+  pointer-events: none;
+  opacity: 0;
 }
-.active{
+
+.darkSwitch{
+  background-image: url("./assets/Floral-Crescent-Moon.svg");
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position-x: center;
+  background-position-y: center;
+  font-size: calc(18px + 0.3vw);
+  padding: 0px 30px;
+}
+.lightSwitch{
+  background-image: url("./assets/sun-8762.svg");
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position-x: center;
+  background-position-y: center;
+  font-size: calc(18px + 0.3vw);
+  padding: 0px 30px;
 }
 
 /*#endregion RegionName*/

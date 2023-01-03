@@ -7,10 +7,12 @@ import Projects from "./components/Projects"
 import Contact from "./components/Contact"
 
 export default function App() {
+  const [darkMode, setDarkMode] = useState(false);
+  function themeSwitch(){setDarkMode((prev) => !prev)}
   return (
-  <>
-    <header>
-      <Navbar />
+  <div className={darkMode ? "dark" : "light"}>
+    <header >
+      <Navbar themeSwitch={themeSwitch} darkmode={darkMode}/>
     </header>
     <div className='container'> 
       <Routes>
@@ -20,7 +22,7 @@ export default function App() {
         <Route path ="/Contact" element={<Contact />}/>
       </Routes>
     </div>
-  </>
+  </div>
   )
 }
 

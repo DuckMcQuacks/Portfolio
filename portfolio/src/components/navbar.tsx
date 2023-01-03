@@ -1,14 +1,21 @@
 import {useState, useEffect} from "react"
 import { Link} from "react-router-dom"
 
-export default function Navbar(){
+interface props{
+  darkmode: boolean;
+  themeSwitch: ()=>void;
+}
+
+export default function Navbar({darkmode,themeSwitch}:props){
     const [width , setWidth] = useState(window.innerWidth)
     const [isActive, setActive] = useState(false)
+  
     //Conditional rendering for cross-Device compatibility regarding phones
     useEffect(() => {
         let cb = function () {
           setWidth(window.innerWidth);
-          setActive(width > 670 ? isActive : false)
+          //Handle corner case bug regarding menu
+          setActive(width > 720 ? isActive : false)
         };
         window.addEventListener("resize", cb);
       
@@ -21,57 +28,63 @@ export default function Navbar(){
       {
         setActive(!isActive)
       }
+      //conditional class
+      const buttonClass = darkmode ? "navButton textdark" : "navButton textlight"
     return(
         <>
         <nav> 
             <Link to="/" >
-            <p className="navButton">Dominik Nándor Menus</p>
+            <p className={buttonClass}>Dominik Nándor Menus</p>
             </Link>
-            { width > 670?
+            { width > 720?
             
             <div className="navButton_Container">
             <Link to="/" >
-                <p className="navButton">Home</p>
+                <p className={buttonClass}>Home</p>
             </Link>
             <Link to="/About" >
-            <p className="navButton">About</p>
+            <p className={buttonClass}>About</p>
             </Link>
             <Link to="/Projects" >
-            <p className="navButton">Projects</p>
+            <p className={buttonClass}>Projects</p>
             </Link>
             <Link to="/Contact" >
-            <p className="navButton">Contact</p>
+            <p className={buttonClass}>Contact</p>
             </Link>
-            </div> : 
+            <div className={darkmode ? "lightSwitch" : "darkSwitch"} onClick={themeSwitch}></div>
+            </div> : <>
+            <div className={darkmode ? "lightSwitch" : "darkSwitch"} onClick={themeSwitch}></div>
             <div className={"fill"+(isActive ? " active" : "")} onClick={clickHandler}></div> 
+            </>
             }
         </nav>
-        <ul className={isActive ? "not_hidden" : "hidden"}>
+        <ul className={isActive ? darkmode? "dark" : "light" : "hidden"}>
             <hr></hr>
             <li>
             <Link to="/" >
-                <p className="navButton" onClick={clickHandler}>Home</p>
+                <p className={buttonClass} onClick={clickHandler}>Home</p>
             </Link>
             </li>
             <hr></hr>
             <li>
             <Link to="/About" >
-            <p className="navButton" onClick={clickHandler}>About</p>
+            <p className={buttonClass} onClick={clickHandler}>About</p>
             </Link>
             </li>
             <hr></hr>
             <li>
             <Link to="/Projects" >
-            <p className="navButton" onClick={clickHandler}>Projects</p>
+            <p className={buttonClass} onClick={clickHandler}>Projects</p>
             </Link>
             </li>
             <hr></hr>
             <li>
             <Link to="/Contact" >
-            <p className="navButton" onClick={clickHandler}>Contact</p>
+            <p className={buttonClass} onClick={clickHandler}>Contact</p>
             </Link>
             </li>
             <hr></hr>
+            
         </ul>
         </>
     )
