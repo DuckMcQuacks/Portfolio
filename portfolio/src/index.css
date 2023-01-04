@@ -4,11 +4,21 @@
   padding: 0px;
   margin: 0px;
   text-decoration: none;
-  font-size: calc(18px + 0.2vw)
+  font-size: calc(18px + 0.2vw);
+  -webkit-transition:all 140ms ease;
+  -moz-transition:all 140ms ease;
+   -ms-transition:all 140ms ease;
+    -o-transition:all 140ms ease;
+       transition:all 140ms ease;
+  -webkit-tap-highlight-color: transparent;
 }
 img{
   max-width: 100%;
   display: block;
+}
+hr{
+  border-top:2px solid;
+  filter:brightness(50%);
 }
 body,html, #root{
   height: 100%;
@@ -24,7 +34,7 @@ body,html, #root{
 }
 .light{
   background-color: white;
-  color: #222222;
+  color: black;
 }
 .img
 {
@@ -32,22 +42,35 @@ body,html, #root{
   height:28px;
   background-size: cover;
   margin-right: 10px;
+  transition: all 0.3s
+}
+.img:hover,.img:active{
+  transform: rotate(15deg) translateY(-5px);
+}
+.rowCenter{
+  display:flex;
+  flex-flow: row;
+  justify-content: center;
 }
 .container{
-  min-height: 90vh;
+  min-height: 90vh; 
+}
+.invert{
+  filter:invert();
 }
 /*----------------------------------------------Start of navbar-------------------------------------------*/
 /*#region navbar*/
 nav{
+  letter-spacing:2px;
   z-index: 2;
   display:flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   justify-content: space-between;
   box-shadow: 0px 11px 30px -2px rgb(0, 0, 0);
   -webkit-box-shadow: 0px 11px 30px -2px rgba(0,0,0,0.17);
   -moz-box-shadow: 0px 11px 30px -2px rgba(0,0,0,0.17);
   text-align: center;
-  padding: 20px 10px;
+  padding: 17px 10px;
 }
 .navButton_Container{
   display: flex;
@@ -55,7 +78,7 @@ nav{
 }
 .navButton{
   font-size: calc(18px + 0.3vw);
-  padding:10px;
+  padding:10px 5px;
   color:white;
   -webkit-transition:all 0.3s ease;
   -moz-transition:all 0.3s ease;
@@ -81,9 +104,6 @@ nav{
   background-position-y: center;
   font-size: calc(18px + 0.3vw);
   padding: 0px 30px;
-}
-.fill.invert{
-  filter:invert();
 }
 .fill.active{
   background-image: url("./assets/close-svgrepo-com.svg");
@@ -151,10 +171,67 @@ ul{
 }
 .pattern{
   background-image: url("./assets/draws-pattern-svgrepo-com.svg");
-  background-size: calc(40px + 4vw)
+  background-size: calc(40px + 4vw);
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  padding:0 calc(10px + 8vw);
 }
-.filterGrey{
-  filter: brightness(0) saturate(100%) invert(82%) sepia(0%) saturate(1%) hue-rotate(137deg) brightness(120%) contrast(92%);
+.patternGrey{
+  background-image: url("./assets/draws-pattern-svgrepo-com-inverted.svg");
+}
+.pattern>h1{
+  letter-spacing:4px;
+  padding-bottom: 40px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: bold;
+  font-size: calc(10px + 3vw);
+  text-transform: uppercase;
+}
+.pattern>p{
+  letter-spacing:1px;
+  font-size: calc(10px + 1vw);
+  padding-bottom: 40px;
+}
+.button{
+  letter-spacing:4px;
+  padding:calc(10px + 0.5vw) calc(40px + 2vw);
+  border-radius: 50px;
+  font-size: larger;
+  transition: all 1s;
+  border:2px solid black;
+  background-color: white;
+}
+.buttondark{
+  border:2px solid white;
+  background-color: black;
+}
+.button:hover,button:active
+{
+  transform: translateY(-10px) scale(1.035);
+}
+.floatingContacts{
+  position:absolute;
+  top:40%;
+  border-radius: 0 5px 5px 0;
+  border: 2px solid white;
+  border-left: 0px;
+
+}
+@media only screen and (max-width: 600px) {
+  .floatingContacts{
+    display: none;
+  }
+  .pattern{
+    padding:0 calc(10px + 2vw);
+  }
+}
+.floatingContacts .img{
+  width:40px;
+  height:40px;
+  margin:10px;
 }
 @keyframes maskAnim {
   0% {
@@ -171,11 +248,12 @@ ul{
 /*----------------------------------------------Start of footer-----------------------------------------*/
 /*#region footer*/
 footer{
+  letter-spacing:1.5px;
   display:flex;
   flex-flow: column;
   justify-content: center;
   background-color: #000000;
-  padding:50px 10%;
+  padding:50px 8%;
   color:white;
   font-family: 'Source Sans Pro', sans-serif;
 }

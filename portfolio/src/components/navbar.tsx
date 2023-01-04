@@ -34,7 +34,7 @@ export default function Navbar({darkmode,themeSwitch}:props){
         <>
         <nav> 
             <Link to="/" >
-            <p className={buttonClass}>Dominik Nándor Menus</p>
+            <p className={buttonClass}>Dominik&nbsp;Nándor&nbsp;Menus</p>
             </Link>
             { width > 720?
             
@@ -58,9 +58,8 @@ export default function Navbar({darkmode,themeSwitch}:props){
             </>
             }
         </nav>
-        <hr />
+        <hr></hr>
         <ul className={isActive ? darkmode? "dark" : "light" : "hidden"}>
-            <hr></hr>
             <li>
             <Link to="/" >
                 <p className={buttonClass} onClick={clickHandler}>Home</p>
