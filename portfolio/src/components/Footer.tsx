@@ -11,7 +11,7 @@ export default function Footer(){
                     <h2>Social</h2>
                     <div className="socialImages">
                     <a href="https://www.linkedin.com/in/dominik-menus-7a129a257" target="_blank" rel="noopener noreferrer"><div className="img linkedIn"></div></a>
-                        <div className="img github"></div>
+                    <a href="https://github.com/DuckMcQuacks" target="_blank"><div className="img github"></div></a>
                         <div className="img discord"></div>
                     </div>
                 </div>

@@ -58,6 +58,7 @@ export default function Navbar({darkmode,themeSwitch}:props){
             </>
             }
         </nav>
+        <hr />
         <ul className={isActive ? darkmode? "dark" : "light" : "hidden"}>
             <hr></hr>
             <li>
