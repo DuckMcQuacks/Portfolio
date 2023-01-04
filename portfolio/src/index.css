@@ -26,6 +26,7 @@ body,html, #root{
   display:flex;
   flex-flow: column nowrap;
   font-family: 'Heebo', sans-serif;
+  overflow-x:hidden;
 
 }
 .dark{
@@ -78,7 +79,7 @@ nav{
 }
 .navButton{
   font-size: calc(18px + 0.3vw);
-  padding:10px 5px;
+  padding:10px 10px;
   color:white;
   -webkit-transition:all 0.3s ease;
   -moz-transition:all 0.3s ease;
@@ -220,7 +221,7 @@ ul{
   border-left: 0px;
 
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 720px) {
   .floatingContacts{
     display: none;
   }
