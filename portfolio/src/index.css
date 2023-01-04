@@ -34,8 +34,9 @@ body,html, #root{
   margin-right: 10px;
 }
 .container{
-  min-height: 100vh;
+  min-height: 90vh;
 }
+/*----------------------------------------------Start of navbar-------------------------------------------*/
 /*#region navbar*/
 nav{
   z-index: 2;
@@ -120,9 +121,9 @@ ul{
   padding: 0px 30px;
   cursor: pointer;
 }
-
+/*----------------------------------------------End of navbar-------------------------------------------*/
 /*#endregion navbar*/
-
+/*----------------------------------------------Start of home---------------------------------------------*/
 /*#region home*/
 .mask-container{
   position: relative;
@@ -148,6 +149,13 @@ ul{
   -webkit-animation: maskAnim 1s steps(24) forwards;
   -moz-animation: maskAnim 1s steps(24) forwards;
 }
+.pattern{
+  background-image: url("./assets/draws-pattern-svgrepo-com.svg");
+  background-size: calc(40px + 4vw)
+}
+.filterGrey{
+  filter: brightness(0) saturate(100%) invert(82%) sepia(0%) saturate(1%) hue-rotate(137deg) brightness(120%) contrast(92%);
+}
 @keyframes maskAnim {
   0% {
     -webkit-mask-position: 100% 0%;
@@ -158,9 +166,9 @@ ul{
     mask-position: 0% 0%;
   }
 }
-  
+/*----------------------------------------------End of home---------------------------------------------*/
 /*#endregion home*/
-
+/*----------------------------------------------Start of footer-----------------------------------------*/
 /*#region footer*/
 footer{
   display:flex;
@@ -170,9 +178,6 @@ footer{
   padding:50px 10%;
   color:white;
   font-family: 'Source Sans Pro', sans-serif;
-  box-shadow: 0px -1px 25px 0px rgba(0,0,0,0.75);
--webkit-box-shadow: 0px -1px 25px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 0px -1px 25px 0px rgba(0,0,0,0.75);
 }
 footer h2{
   padding-bottom: 20px;
@@ -234,4 +239,5 @@ filter: invert()
 background-image:  url("./assets/discord-fill-svgrepo-com.svg");
 filter: invert()
 }
+/*----------------------------------------------End of footer-------------------------------------------*/
 /*#endregion footer*/

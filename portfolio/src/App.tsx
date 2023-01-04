@@ -17,7 +17,7 @@ export default function App() {
     </header>
     <div className={"container"+(darkMode ? " dark" : " light")}> 
       <Routes>
-        <Route path ="/" element={<Home />}/>
+        <Route path ="/" element={<Home darkmode={darkMode} />}/>
         <Route path ="/About" element={<About />}/>
         <Route path ="/Projects" element={<Projects />}/>
         <Route path ="/Contact" element={<Contact />}/>
