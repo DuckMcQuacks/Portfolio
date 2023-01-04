@@ -5,6 +5,7 @@ import Home from "./components/Home"
 import About from "./components/About"
 import Projects from "./components/Projects"
 import Contact from "./components/Contact"
+import Footer from './components/Footer'
 
 export default function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -14,7 +15,7 @@ export default function App() {
     <header >
       <Navbar themeSwitch={themeSwitch} darkmode={darkMode}/>
     </header>
-    <div className='container'> 
+    <div className={"container"+(darkMode ? " dark" : "light")}> 
       <Routes>
         <Route path ="/" element={<Home />}/>
         <Route path ="/About" element={<About />}/>
@@ -22,6 +23,7 @@ export default function App() {
         <Route path ="/Contact" element={<Contact />}/>
       </Routes>
     </div>
+    <Footer/>
   </div>
   )
 }

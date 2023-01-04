@@ -54,7 +54,7 @@ export default function Navbar({darkmode,themeSwitch}:props){
             <div className={darkmode ? "lightSwitch" : "darkSwitch"} onClick={themeSwitch}></div>
             </div> : <>
             <div className={darkmode ? "lightSwitch" : "darkSwitch"} onClick={themeSwitch}></div>
-            <div className={"fill"+(isActive ? " active" : "")} onClick={clickHandler}></div> 
+            <div className={"fill"+(darkmode? " invert":"")+(isActive ? " active" : "")} onClick={clickHandler}></div> 
             </>
             }
         </nav>
