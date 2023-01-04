@@ -15,7 +15,7 @@ export default function App() {
     <header >
       <Navbar themeSwitch={themeSwitch} darkmode={darkMode}/>
     </header>
-    <div className={"container"+(darkMode ? " dark" : "light")}> 
+    <div className={"container"+(darkMode ? " dark" : " light")}> 
       <Routes>
         <Route path ="/" element={<Home />}/>
         <Route path ="/About" element={<About />}/>
