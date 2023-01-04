@@ -33,6 +33,9 @@ body,html, #root{
   background-size: cover;
   margin-right: 10px;
 }
+.container{
+  min-height: 100vh;
+}
 /*#region navbar*/
 nav{
   z-index: 2;

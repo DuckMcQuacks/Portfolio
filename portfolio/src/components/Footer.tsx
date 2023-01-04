@@ -10,9 +10,9 @@ export default function Footer(){
                 <div className="social">
                     <h2>Social</h2>
                     <div className="socialImages">
-                    <a href="https://www.linkedin.com/in/dominik-menus-7a129a257" target="_blank" rel="noopener noreferrer"><div className="img linkedIn"></div></a>
+                    <a href="https://www.linkedin.com/in/dominik-menus-7a129a257" target="_blank"><div className="img linkedIn"></div></a>
                     <a href="https://github.com/DuckMcQuacks" target="_blank"><div className="img github"></div></a>
-                        <div className="img discord"></div>
+                        <a href="https://discordapp.com/users/288725723101790209" target="_blank"><div className="img discord"></div></a>
                     </div>
                 </div>
             </div>
