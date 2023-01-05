@@ -1,3 +1,4 @@
+import {Link} from "react-router-dom"
 interface props{
     darkmode: boolean
 }
@@ -41,7 +42,9 @@ export default function About({darkmode}:props){
                 <h1>Get to know me!</h1>
                 <p>I am a <span>Frontend </span> focused <span>Web Developer</span>, building clean looking <span>Front-end</span> of websites and Web Applications. You can check out some of my work in the <span>Projects</span> section.</p>
                 <p>I am open to <span>Job</span> opportunities where I can contribute, learn and grow, If you have a good opportunity that matches my skills and experience then don't hesitate to <span>contact</span> me.</p>
-                <div className={"button"+(darkmode ? " buttondark" : "")}>Contact</div>
+                <Link to="/Contact">
+                <div className={"button"+(darkmode ? " buttondark" : "")}><p className={darkmode ? "textdark" : "textlight"}>Contact</p></div>
+                </Link>
             </div>
             <div className="aboutMySkills">
                 <h1>My Skills</h1>

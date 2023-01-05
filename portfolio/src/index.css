@@ -5,12 +5,15 @@
   margin: 0px;
   text-decoration: none;
   font-size: calc(18px + 0.2vw);
-  -webkit-transition:all 70ms ease;
-  -moz-transition:all 70ms ease;
-   -ms-transition:all 70ms ease;
-    -o-transition:all 70ms ease;
-       transition:all 70ms ease;
+  transition-property: background-color, color;
+  transition: 70ms ease;
   -webkit-tap-highlight-color: transparent;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: all 5000s ease-in-out 0s;
 }
 img{
   max-width: 100%;
@@ -33,9 +36,15 @@ body,html, #root{
   background-color: #222222;
   color: white;
 }
+.dark::placeholder{
+  color: rgb(218, 218, 218);
+}
 .light{
   background-color: white;
   color: black;
+}
+.light::placeholder{
+  color:rgb(107, 107, 107);
 }
 .img
 {
@@ -43,7 +52,7 @@ body,html, #root{
   height:28px;
   background-size: cover;
   margin-right: 10px;
-  transition: all 0.3s
+  transition: transform 300ms
 }
 .img:hover,.img:active{
   transform: rotate(15deg) translateY(-5px);
@@ -53,11 +62,13 @@ body,html, #root{
   flex-flow: row;
   justify-content: center;
 }
+.columnCenter{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
 .container{
   min-height: 90vh; 
-}
-.invert{
-  filter:invert();
 }
 .button{
   cursor: pointer;
@@ -66,12 +77,12 @@ body,html, #root{
   border-radius: 50px;
   text-align: center;
   font-size: larger;
-  transition: all 1s;
-  border:2px solid black;
+  transition: transform 500ms;
+  border: 2px solid black;
   background-color: white;
 }
 .buttondark{
-  border:2px solid white;
+  border: 2px solid white;
   background-color: black;
 }
 .button:hover,button:active
@@ -84,6 +95,7 @@ header{
   position:sticky;
   top:0px;
   z-index: 10;
+  user-select: none;
 }
 nav{
   letter-spacing:2px;
@@ -105,11 +117,8 @@ nav{
   font-size: calc(18px + 0.3vw);
   padding:10px 10px;
   color:white;
-  -webkit-transition:all 0.3s ease;
-  -moz-transition:all 0.3s ease;
-   -ms-transition:all 0.3s ease;
-    -o-transition:all 0.3s ease;
-       transition:all 0.3s ease;
+  transition-property: font-size, color;
+  transition:300ms ease;
 }
 .textdark{
   color: white;
@@ -197,9 +206,6 @@ ul{
 .pattern{
   background-image: url("./assets/draws-pattern-svgrepo-com.svg");
   background-size: calc(40px + 4vw);
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
   position: relative;
   text-align: center;
   padding:0 calc(10px + 8vw);
@@ -343,10 +349,11 @@ ul{
   background-color: rgb(241 241 241);
   color: rgb(64 64 64);
   opacity: 0.85;
-  transition: all 0.3s;
+  transition-property: transform, opacity, filter;
+  transition: 300ms ease-in-out;
 }
 .aboutSkill:hover{
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   opacity: 1;
   filter:contrast(105%);
 }
@@ -356,6 +363,90 @@ ul{
 }
 /*----------------------------------------------End of about----------------------------------------------*/
 /*#endregion about*/
+/*----------------------------------------------Start of contact------------------------------------------*/
+/*#region contact*/
+.contactSection{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  padding:20px;
+  margin:0 10%;
+}
+@media only screen and (max-width: 720px) {
+  .contactSection{
+    margin: 0;
+  }
+}
+.contactSection span{
+  font-size: calc(10px + 1vw);
+  font-weight: 600;
+}
+.contactSection>form{
+  text-align: left;
+  display: flex;
+  flex-flow: column;
+  padding: 30px 50px;
+  border-radius: 10px;
+}
+form{
+  filter: drop-shadow(0px 0px 5px rgba(128, 128, 128, 0.455));
+}
+form>h3{
+margin: 10px 0;
+}
+form>input,form>textarea,form>input,form>textarea{
+  padding:15px;
+  font-size: calc(10px + 0.5vw);
+  border-radius: 5px;
+  border:2px solid rgb(126, 126, 126);
+  font-family: 'Source Sans Pro', sans-serif;
+}
+form>input[type="button"]{
+  cursor:pointer;
+  border:0;
+  border-radius: 5px;
+  width:fit-content;
+  padding:10px 50px;
+  margin:auto;
+  margin-top: 50px;
+  transition: transform 300ms;
+}
+form>input[type="button"]:hover
+{
+  transform: translateY(-5px) scale(1.05);
+}
+form>textarea{
+  min-height: 150px;
+  resize: none;
+}
+form>h3{
+  font-weight: 200;
+  font-size: calc(10px + 1vw);
+}
+.contactIntro{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 24px;
+  text-align: center;
+}
+.contactIntro>h1{
+  margin: 3% 5%;
+  font-size: calc(10px + 2vw);
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.contactIntro>hr{
+  border-top: 3px solid;
+  border-radius: 10px;
+  width: calc(80px + 16vw);
+  margin:auto;
+}
+.contactIntro>p{
+  font-size: calc(10px + 1vw);
+  margin: 3% 5%;
+}
+/*------------------------------------------------End of contact------------------------------------------*/
+/*#endregion contact*/
 /*----------------------------------------------Start of footer-------------------------------------------*/
 /*#region footer*/
 footer{

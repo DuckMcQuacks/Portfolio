@@ -20,7 +20,7 @@ export default function App() {
         <Route path ="/" element={<Home darkmode={darkMode} />}/>
         <Route path ="/About" element={<About darkmode={darkMode}/>}/>
         <Route path ="/Projects" element={<Projects />}/>
-        <Route path ="/Contact" element={<Contact />}/>
+        <Route path ="/Contact" element={<Contact darkmode={darkMode} />}/>
       </Routes>
     </div>
     <Footer/>

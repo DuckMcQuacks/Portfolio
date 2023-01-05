@@ -9,7 +9,7 @@ export default function Home({darkmode}:props){
     const isInvert= darkmode ? "" : " invert"
     return(
     <>
-        <div className={"container pattern"+(darkmode?"" : " patternGrey")}>
+        <div className={"container pattern columnCenter"+(darkmode?"" : " patternGrey")}>
             <h1>Hey, I'm Dominik Nándor Menus</h1>
             <p>A Frontend focused Web developer, able to design and build the Frontend of Websites and Web Applications that leads to the success of the overall product.</p>
             <div className="rowCenter">
