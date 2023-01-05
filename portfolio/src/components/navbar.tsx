@@ -32,7 +32,7 @@ export default function Navbar({darkmode,themeSwitch}:props){
       const buttonClass = darkmode ? "navButton textdark" : "navButton textlight"
     return(
         <>
-        <nav> 
+        <nav className={darkmode? "dark" : "light"}> 
             <Link to="/" >
             <p className={buttonClass}>Dominik&nbsp;Nándor&nbsp;Menus</p>
             </Link>
