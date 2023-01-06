@@ -401,7 +401,7 @@ form>input,form>textarea,form>input,form>textarea{
   border:2px solid rgb(126, 126, 126);
   font-family: 'Source Sans Pro', sans-serif;
 }
-form>input[type="button"]{
+form>input[type="submit"]{
   cursor:pointer;
   border:0;
   border-radius: 5px;
@@ -411,7 +411,7 @@ form>input[type="button"]{
   margin-top: 50px;
   transition: transform 300ms;
 }
-form>input[type="button"]:hover
+form>input[type="submit"]:hover
 {
   transform: translateY(-5px) scale(1.05);
 }

@@ -27,7 +27,7 @@ export default function About({darkmode}:props){
     }
     const skillsArray = skillsObject.skills.map((a,b)=>{
         return(
-            <div className={"aboutSkill" +(darkmode ? " aboutSkillDark" : "")} title={skillsObject.skillsDesc[b]}>{a}</div>
+            <div key={b} className={"aboutSkill" +(darkmode ? " aboutSkillDark" : "")} title={skillsObject.skillsDesc[b]}>{a}</div>
         )
     })
     return(
