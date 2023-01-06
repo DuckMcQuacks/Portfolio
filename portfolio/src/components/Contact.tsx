@@ -31,6 +31,7 @@ export default function Contact({darkmode}:props){
                     message: formData.message
             })})
         }
+        
     return(
         <div className="contact">
             <div className={"container pattern"+(darkmode?"" : " patternGrey")}>

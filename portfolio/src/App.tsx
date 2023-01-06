@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Navbar from './components/navbar'
 import { Route, Routes} from "react-router-dom"
 import Home from "./components/Home"
@@ -8,7 +8,11 @@ import Contact from "./components/Contact"
 import Footer from './components/Footer'
 
 export default function App() {
-  const [darkMode, setDarkMode] = useState(false);
+  
+  const [darkMode, setDarkMode] = useState<boolean>(JSON.parse(window.localStorage.getItem("darkmode")|| "false"));
+  useEffect(()=>{
+    window.localStorage.setItem("darkmode", JSON.stringify(darkMode))
+  },[darkMode])
   function themeSwitch(){setDarkMode((prev) => !prev)}
 
   
