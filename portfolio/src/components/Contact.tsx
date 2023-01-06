@@ -21,6 +21,11 @@ export default function Contact({darkmode}:props){
     //back-end express train
         async function sendData(e:any){
             e.preventDefault();
+            setFormData({
+                name: "",
+                email: "",
+                message: ""
+            })
             //Didn't do checking, form already did enough for client.
             fetch('api/email',{
                 method:'POST',
