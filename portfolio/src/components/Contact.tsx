@@ -4,14 +4,16 @@ interface props{
 }
 
 export default function Contact({darkmode}:props){
-    const [data, setData] = React.useState(null);
-
-  React.useEffect(() => {
-    fetch('http://localhost:3000/Contact')
-      .then((res) => res.json())
-      .then((data) => setData(data.message));
-      console.log(data)
-  }, []);
+    const [backEndData, setBackEndData] = React.useState(null);
+    React.useEffect(()=>{
+        fetch('/api').then(
+            response => response.json()
+        ).then(
+            data =>{
+                setBackEndData(data)
+            }
+        )
+        }, [])
     return(
         <div className="contact">
             <div className={"container pattern"+(darkmode?"" : " patternGrey")}>
@@ -29,7 +31,7 @@ export default function Contact({darkmode}:props){
                         <h3>Message</h3>
                         <textarea className={darkmode ? "dark" : "light"} placeholder="Enter Your Message"></textarea>
                         <input type="button" value="Submit"/>
-                        <p>{!data ? "Loading..." : data}</p>
+                        <p>{!backEndData ? "Loading..." : backEndData}</p>
                     </form>
                 </div>
             </div>

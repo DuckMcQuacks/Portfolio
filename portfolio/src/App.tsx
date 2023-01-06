@@ -10,6 +10,8 @@ import Footer from './components/Footer'
 export default function App() {
   const [darkMode, setDarkMode] = useState(false);
   function themeSwitch(){setDarkMode((prev) => !prev)}
+
+  
   return (
   <div className={darkMode ? "dark" : "light"}>
     <header >

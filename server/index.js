@@ -1,9 +1,11 @@
 const express = require('express');
-
+const cors = require('cors');
 const app = express();
+app.use(cors())
+const PORT = 5000
 
-app.get('/Contact',(request, response) =>{
-    response.send("Does this bloody work?")
+app.get('/api',(req, res) =>{
+    res.json("stupid shit");
 });
 
-app.listen(process.env.PORT || 3000, () => console.log('It works?'))
+app.listen(PORT, () => console.log('It works?'))

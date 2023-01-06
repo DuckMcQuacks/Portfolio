@@ -1,5 +1,6 @@
 {
   "name": "portfolio",
+  "proxy" : "http://127.0.0.1:my_servers_port_address_",
   "private": true,
   "version": "0.0.0",
   "type": "module",
