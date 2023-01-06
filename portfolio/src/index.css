@@ -9,6 +9,8 @@
   transition: 70ms ease;
   -webkit-tap-highlight-color: transparent;
 }
+/*--------------------------------------------Start of generalStuff---------------------------------------*/
+/*#region generalStuff*/
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -89,6 +91,8 @@ body,html, #root{
 {
   transform: translateY(-10px) scale(1.035);
 }
+/*----------------------------------------------End of generalStuff---------------------------------------*/
+/*#endregion generalStuff*/
 /*----------------------------------------------Start of navbar-------------------------------------------*/
 /*#region navbar*/
 header{
