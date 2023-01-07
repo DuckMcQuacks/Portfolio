@@ -7,6 +7,7 @@ interface props{
 }
 
 export default function Navbar({darkmode,themeSwitch}:props){
+
     const [width , setWidth] = useState(window.innerWidth)
     const [isActive, setActive] = useState(false)
   
@@ -37,7 +38,7 @@ export default function Navbar({darkmode,themeSwitch}:props){
             <p className={buttonClass}>Dominik&nbsp;Nándor&nbsp;Menus</p>
             </Link>
             { width > 720?
-            
+            //desktop version
             <div className="navButton_Container">
             <Link to="/" >
                 <p className={buttonClass}>Home</p>
@@ -52,11 +53,15 @@ export default function Navbar({darkmode,themeSwitch}:props){
             <p className={buttonClass}>Contact</p>
             </Link>
             <div className={darkmode ? "lightSwitch" : "darkSwitch"} onClick={themeSwitch}></div>
-            </div> : <>
+            </div>
+
+            :
+            //mobile version
+            <>
             <div className={darkmode ? "lightSwitch" : "darkSwitch"} onClick={themeSwitch}></div>
             <div className={"fill"+(darkmode? " invert":"")+(isActive ? " active" : "")} onClick={clickHandler}></div> 
-            </>
-            }
+            </>}
+
         </nav>
         <hr></hr>
         <ul className={isActive ? darkmode? "dark" : "light" : "hidden"}>
