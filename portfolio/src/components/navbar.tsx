@@ -72,19 +72,19 @@ export default function Navbar({darkmode,themeSwitch}:props){
             </li>
             <hr></hr>
             <li>
-            <Link to="/About" >
+            <Link to="/about" >
             <p className={buttonClass} onClick={clickHandler}>About</p>
             </Link>
             </li>
             <hr></hr>
             <li>
-            <Link to="/Projects" >
+            <Link to="/projects" >
             <p className={buttonClass} onClick={clickHandler}>Projects</p>
             </Link>
             </li>
             <hr></hr>
             <li>
-            <Link to="/Contact" >
+            <Link to="/contact" >
             <p className={buttonClass} onClick={clickHandler}>Contact</p>
             </Link>
             </li>
