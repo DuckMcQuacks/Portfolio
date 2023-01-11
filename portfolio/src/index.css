@@ -4,7 +4,6 @@
   padding: 0px;
   margin: 0px;
   text-decoration: none;
-  font-size: calc(18px + 0.2vw);
   transition-property: background-color, color;
   transition: 70ms ease;
   -webkit-tap-highlight-color: transparent;
@@ -335,6 +334,7 @@ ul{
   grid-auto-columns: 1fr;
   grid-template-columns: 1fr 1fr 1fr;
   text-align: center;
+  font-size: calc(16px + 0.5vw);
 }
 .aboutMySkills>h1{
   margin: 3% 0;
@@ -370,6 +370,92 @@ ul{
 }
 /*----------------------------------------------End of about----------------------------------------------*/
 /*#endregion about*/
+/*----------------------------------------------Start of projects-----------------------------------------*/
+/*#region projects*/
+.projectsSection{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  padding:20px;
+}
+.projectsIntro{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 24px;
+  text-align: center;
+}
+.projectsIntro>h1{
+  margin: 3% 5%;
+  font-size: calc(10px + 2vw);
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.projectsIntro>hr{
+  border-top: 3px solid;
+  border-radius: 10px;
+  width: calc(80px + 16vw);
+  margin:auto;
+}
+.projectsIntro>p{
+  font-size: calc(10px + 1vw);
+  margin: 3% 5%;
+}
+.projectTemplate{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 2vh 5vw;
+}
+.projectTemplate .button{
+  width:fit-content;
+  padding:calc(10px + 0.5vw) calc(40px + 0.5vw);
+  margin-top: 50px;
+  font-size: calc(8px + 0.5vw);
+}
+.projectImage{
+  max-width:max-content;
+  image-rendering: optimizeQuality;
+  margin-left: 10%;
+  max-width: 40vw;
+  height:auto;
+  border: 1.5px solid;
+  border-bottom: 5px solid;
+  border-radius: 5px;
+  margin:auto;
+}
+@media only screen and (max-width: 720px) {
+  .projectTemplate{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 2vh 5vw;
+  }
+  .projectTemplate .button{
+    margin:auto;
+    width:fit-content;
+    padding:calc(10px + 0.5vw) calc(40px + 0.5vw);
+    margin-top: 50px;
+    font-size: calc(8px + 0.5vw);
+  }
+  .projectImage{
+    max-width:max-content;
+    image-rendering: optimizeQuality;
+    margin-left: 10%;
+    max-width: 100%;
+    height:auto;
+    border: 1.5px solid;
+    border-bottom: 5px solid;
+    border-radius: 5px;
+    margin:auto;
+  }
+}
+.projectDesc{
+  margin:auto 5vw;
+}
+.projectDesc>h1{
+  font-size: calc(16px + 1vw);
+  margin: 20px 0px;
+}
+/*----------------------------------------------end of projects-------------------------------------------*/
+/*#endregion projects*/
 /*----------------------------------------------Start of contact------------------------------------------*/
 /*#region contact*/
 .contactSection{
@@ -457,6 +543,7 @@ form>h3{
 /*----------------------------------------------Start of footer-------------------------------------------*/
 /*#region footer*/
 footer{
+  font-size: calc(14px + 0.5vw);
   letter-spacing:1.5px;
   display:flex;
   flex-flow: column;
