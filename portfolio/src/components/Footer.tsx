@@ -5,7 +5,7 @@ export default function Footer(){
             <div className="info">
                 <div className="about">
                     <h2>Dominik Nándor Menus</h2>
-                    <p className="small">Currently a Frontend focused Web developer, able to design and build the Frontend of Websites.</p>
+                    <p className="small">A Frontend focused Web developer, able to design and build the Frontend of Websites.</p>
                 </div>
                 <div className="social">
                     <h2>Social</h2>
