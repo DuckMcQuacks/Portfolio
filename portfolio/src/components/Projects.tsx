@@ -1,6 +1,6 @@
 import ProjectTemplate from "./projectTemplate"
-import portfolioDesktopDark from "/images/portfolio_desktopDark.png";
-import portfolioDesktopLight from "/images/portfolio_desktopLight.png";
+import portfolioDesktopDark from "./images/portfolio_desktopDark.png";
+import portfolioDesktopLight from "./images/portfolio_desktopLight.png";
 interface props {
     darkmode: boolean,
 }
