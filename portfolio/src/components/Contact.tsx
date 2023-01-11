@@ -1,13 +1,15 @@
 import {useState} from 'react'
+import { send } from 'emailjs-com';
 interface props{
     darkmode: boolean
 }
 
 export default function Contact({darkmode}:props){
     const [formData, setFormData] = useState({
-        name:"",
-        email:"",
-        message:""
+        from_name:"",
+        reply_to:"",
+        message:"",
+        to_name:"Dominik"
 
     })
     function handleChange(event : any){
@@ -21,20 +23,23 @@ export default function Contact({darkmode}:props){
     //back-end express train
         async function sendData(e:any){
             e.preventDefault();
-            setFormData({
-                name: "",
-                email: "",
-                message: ""
-            })
-            //Didn't do checking, form already did enough for client.
-            fetch('api/email',{
-                method:'POST',
-                headers:{"Content-Type": "application/json"},
-                body: JSON.stringify({
-                    name: formData.name,
-                    email: formData.email,
-                    message: formData.message
-            })})
+            send(
+              'service_da495e9',
+              'template_huftt3t',
+              formData,
+              'MsI1kcrR8fk9DP2e_'
+            )
+              .then((response) => {
+                console.log('SUCCESS!', response.status, response.text);
+              })
+              .catch((err) => {
+                alert('FAILED... \n'+ err);
+              });
+              setFormData({        
+              from_name:"",
+              reply_to:"",
+              message:"",
+              to_name:"Dominik"})
         }
         
     return(
@@ -48,9 +53,9 @@ export default function Contact({darkmode}:props){
                     </div>
                     <form className={darkmode ? "dark" : "light"} onSubmit={sendData}>
                         <h3>Name</h3>
-                        <input className={darkmode ? "dark" : "light"} value={formData.name} type="text" name="name" id="name" placeholder="Enter Your Name" onChange={handleChange} required/>
+                        <input className={darkmode ? "dark" : "light"} value={formData.from_name} type="text" name="from_name" id="from_name" placeholder="Enter Your Name" onChange={handleChange} required/>
                         <h3>Email</h3>
-                        <input className={darkmode ? "dark" : "light"} value={formData.email} type="email" name="email" id="email" placeholder="Enter Your Mail" onChange={handleChange} required/>
+                        <input className={darkmode ? "dark" : "light"} value={formData.reply_to} type="email" name="reply_to" id="reply_to" placeholder="Enter Your Mail" onChange={handleChange} required/>
                         <h3>Message</h3>
                         <textarea className={darkmode ? "dark" : "light"} value={formData.message} name="message" placeholder="Enter Your Message" onChange={handleChange} required></textarea>
                         <input type="submit" value="Submit"/>
