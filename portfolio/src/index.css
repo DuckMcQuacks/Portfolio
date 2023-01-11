@@ -136,6 +136,9 @@ nav{
   color:#f9d534;
   font-size: calc(17.8px + 0.299vw);
 }
+.invert{
+  filter:invert();
+}
 .fill{
   cursor: pointer;
   background-image: url("./assets/menu-hamburger-solid-svgrepo-com.svg");
