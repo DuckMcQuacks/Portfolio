@@ -438,6 +438,17 @@ ul{
     margin-top: 50px;
     font-size: calc(8px + 0.5vw);
   }
+  .projectImage{
+    max-width:max-content;
+    image-rendering: optimizeQuality;
+    margin-left: 10%;
+    max-width: calc(100px + 25vw);
+    height:auto;
+    border: 1.5px solid;
+    border-bottom: 5px solid;
+    border-radius: 5px;
+    margin:auto;
+  }
 }
 .projectDesc{
   margin:auto 5vw;
