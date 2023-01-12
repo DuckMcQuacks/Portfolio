@@ -5,8 +5,8 @@ import './index.css'
 import {HashRouter, BrowserRouter} from "react-router-dom"
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-    <BrowserRouter basename='/'>
+    <HashRouter>
     <App />
-    </BrowserRouter>
+    </HashRouter>
 
 )
