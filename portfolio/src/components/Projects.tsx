@@ -22,8 +22,10 @@ export default function Projects({darkmode}:props){
             imageLightDesktop={portfolioLightDesktop}
             imageLightPhone={portfolioLightPhone}
             darkMode={darkmode}
-            desc={"My portfolio. A hub where I link my projects. For the layout I have taken inspiration from Ram Maheswari's portfolio. "}
-            title={"Portfolio"}/>
+            desc={"My portfolio. A webpage which contains links and descriptions to all of my projects allowing other people to view them. Made with the intention of showcasing some of my work."}
+            title={"Portfolio"}
+            linkName={"portfolio"} 
+            />
         </div>
     )
 }

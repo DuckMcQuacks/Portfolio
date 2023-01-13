@@ -6,6 +6,7 @@ import About from "./components/About"
 import Projects from "./components/Projects"
 import Contact from "./components/Contact"
 import Footer from './components/Footer'
+import PortfolioStudy from "./components/PortfolioStudy"
 
 export default function App() {
   
@@ -27,6 +28,8 @@ export default function App() {
         <Route path ="/about" element={<About darkmode={darkMode}/>}/>
         <Route path ="/projects" element={<Projects darkmode={darkMode}/>}/>
         <Route path ="/contact" element={<Contact darkmode={darkMode} />}/>
+
+        <Route path="/projects/portfolio" element={<PortfolioStudy darkmode={darkMode}/>}/>
       </Routes>
     </div>
     <Footer/>

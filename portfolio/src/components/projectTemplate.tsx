@@ -2,13 +2,14 @@ import {Link} from "react-router-dom"
 import {useState, useEffect} from 'react'
 
 interface props{
-    darkMode: boolean,
-    imageDarkDesktop: string,
-    imageDarkPhone: string,
-    imageLightDesktop: string,
-    imageLightPhone: string,
-    desc: string,
+    darkMode: boolean
+    imageDarkDesktop: string
+    imageDarkPhone: string
+    imageLightDesktop: string
+    imageLightPhone: string
+    desc: string
     title: string
+    linkName: string 
 }
 
 export default function ProjectTemplate(props: props){
@@ -45,9 +46,9 @@ export default function ProjectTemplate(props: props){
             <img className="projectImage" src={image}/>
             <div className="projectDesc">
                 <h1>{props.title}</h1>
-                {props.desc}
+                <p>{props.desc}</p>
                 <br />
-                <Link to="/Projects" style={{textTransform:"uppercase"}}>
+                <Link to={"/Projects/"+props.linkName} style={{textTransform:"uppercase"}}>
                 <h1 className={"button"+(props.darkMode ? " buttondark textdark" : " textlight")}><p>Case Study</p></h1>
                 </Link>
             </div>
