@@ -1,11 +1,13 @@
 import ProjectTemplate from "./projectTemplate";
 import portfolioDarkDesktop from "./images/portfolio_desktopDark.png";
-import portfolioDarkPhone from "./images/portfolio_phoneDark.jpg"
+import portfolioDarkPhone from "./images/portfolio_phoneDark.jpg";
 import portfolioLightDesktop from "./images/portfolio_desktopLight.png";
 import portfolioLightPhone from "./images/portfolio_phoneLight.jpg";
+
 interface props {
     darkmode: boolean,
 }
+
 export default function Projects({darkmode}:props){
     return(
         <div className="projectsSection">
