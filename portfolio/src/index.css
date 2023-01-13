@@ -417,7 +417,6 @@ ul{
 .projectImage{
   max-width:max-content;
   image-rendering: optimizeQuality;
-  margin-left: 10%;
   max-width: 40vw;
   height:auto;
   border: 1.5px solid;
@@ -439,15 +438,7 @@ ul{
     font-size: calc(8px + 0.5vw);
   }
   .projectImage{
-    max-width:max-content;
-    image-rendering: optimizeQuality;
-    margin-left: 10%;
     max-width: calc(100px + 25vw);
-    height:auto;
-    border: 1.5px solid;
-    border-bottom: 5px solid;
-    border-radius: 5px;
-    margin:auto;
   }
 }
 .projectDesc{
@@ -555,6 +546,42 @@ form>h3{
 }
 /*------------------------------------------------End of contact------------------------------------------*/
 /*#endregion contact*/
+/*----------------------------------------------Start of caseStudy----------------------------------------*/
+/*#region caseStudy*/
+.studyImage
+{
+  max-width:max-content;
+  image-rendering: optimizeQuality;
+  max-width: 50vw;
+  height:auto;
+  border: 2px solid;
+  border-bottom: 8px solid;
+  border-radius: 5px;
+  margin:auto;
+}
+.caseStudyContainer
+{
+  margin: 20px 25vw;
+  font-size: larger;  
+}
+.caseStudyContainer>p{
+  filter:brightness(80%);
+  margin: 10px 0;
+  font-size: calc(16px + 1vw);
+}
+@media only screen and (max-width: 720px) {
+  .studyImage{
+    max-width: calc(100px + 50vw);
+  }
+  .caseStudyContainer
+{
+  margin: 20px 12vw;
+  font-size: smaller;
+  line-height: 5px;
+}
+}
+/*------------------------------------------------End of caseStudy----------------------------------------*/
+/*#endregion caseStudy*/
 /*----------------------------------------------Start of footer-------------------------------------------*/
 /*#region footer*/
 footer{
