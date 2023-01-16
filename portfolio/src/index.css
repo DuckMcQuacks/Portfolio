@@ -75,6 +75,7 @@ body,html, #root{
   min-height: 90vh; 
 }
 .button{
+  user-select: none;
   cursor: pointer;
   letter-spacing:4px;
   padding:calc(10px + 0.5vw) calc(40px + 2vw);
@@ -552,7 +553,8 @@ form>h3{
 {
   max-width:max-content;
   image-rendering: optimizeQuality;
-  max-width: 50vw;
+  max-height: 60vh;
+  max-width: 80vw;
   height:auto;
   border: 2px solid;
   border-bottom: 8px solid;
@@ -567,7 +569,10 @@ form>h3{
 .caseStudyContainer>p{
   filter:brightness(80%);
   margin: 10px 0;
-  font-size: calc(16px + 1vw);
+  font-size: calc(14px + 0.5vw);
+}
+.caseStudyContainer a{
+  color:#f9d534;
 }
 @media only screen and (max-width: 720px) {
   .studyImage{
@@ -577,7 +582,6 @@ form>h3{
 {
   margin: 20px 12vw;
   font-size: smaller;
-  line-height: 5px;
 }
 }
 /*------------------------------------------------End of caseStudy----------------------------------------*/
